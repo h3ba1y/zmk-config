@@ -119,9 +119,9 @@
 
                 default_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  Q         |  W          |  E         |  R          |  T        |   |  Y        |  U        |  I         |  P           |  BSPC      |       |
+// |       |  Q         |  W          |  E         |  R          |  T        |   |  Y        |  U        |  I         |  O           |    P       |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  A         |  S          |  D         |  F          |  G        |   |  H        |  J        |  K         |  L           |  O         |       |
+// |       |  A         |  S          |  D         |  F          |  G        |   |  H        |  J        |  K         |  L           |  BSPC      |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  Z/LSHIFT  |  X          |  C         |  V          |  B        |   |  N        |  M        |  ,         |  .           |  /|RSHIFT  |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -129,10 +129,10 @@
 //                                    ----------------------------------------   ----------------------------------------------
                          
                         bindings = <
-                                &none   &kp Q         &kp W   &kp E   &kp R   &kp T           &kp Y   &kp U   &kp I       &kp P     &kp BSPC         &none
-                                &none   &kp A         &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K       &kp L     &kp O            &none
-                                &none   &bm LSHFT Z   &kp X   &kp C   &kp V   &kp B           &kp N   &kp M   &kp COMMA   &kp DOT   &bm RSHFT FSLH   &none
-                                                        &kp LCTRL   &kp LALT   &sm LGUI SPACE      &lt LOWER TAB   &lt RAISE ENTER   &td_multi_mac                        
+                                &none   &kp Q         &kp W   &kp E   &kp R   &kp T           &kp Y   &kp U   &kp I       &kp O        &kp P            &none
+                                &none   &kp A         &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K       &kp L        &kp BSPC         &none
+                                &none   &bm LSHFT Z   &kp X   &kp C   &kp V   &kp B           &kp N   &kp M   &kp COMMA   &kp DOT      &bm RSHFT FSLH   &none
+                                                        &kp LCTRL   &kp LALT   &sm LGUI SPACE      &lt LOWER TAB   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
 
