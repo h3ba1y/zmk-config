@@ -5,4 +5,4 @@
  #
 
 config SHIELD_HC36KB
-    def_bool $(shields_list_contains,HC36KB)
+    def_bool $(shields_list_contains,hc36kb)
