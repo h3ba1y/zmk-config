@@ -54,6 +54,46 @@
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LT>, <&macro_tap &kp GT>, <&macro_release &kp LT>; 
                 };
+
+
+                // copy
+                copy: copy {
+                        label = "copy";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>; 
+                };
+
+                // cut
+                cut: cut {
+                        label = "cut";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>; 
+                };
+                // paste
+                paste: paste {
+                        label = "paste";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>; 
+                };
+                
+                // undo
+                undo: undo {
+                        label = "undo";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Z>, <&macro_release &kp LGUI>; 
+                };
+
+                // redo
+                redo: redo {
+                        label = "redo";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp Z>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>; 
+                };
         };
         
         behaviors {
@@ -63,6 +103,14 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp ESC>, <&spotlight>, <&mac_emoji>;
+                };
+
+                cp_ct: tap_dance_multi_mac {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_MULTI_MAC";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&copy>, <&cut>;
                 };
 
                 bm: bottom_row_mods {
@@ -122,19 +170,19 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  _           |  -        |    +       |     =       |    :      |   |     `     |     =>      |     <>    |             |   Delete   |       |
+// |       |  _           |  -        |    +       |     =       |    :      |   |     `     |     =>      |     <>    |   undo      |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |     /      |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |      ~    |             |           |             |  \/RSHIFT  |       |
+// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |      ~    |  copy/cut   |    paste  |  redo       |  \/RSHIFT  |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp UNDER           &kp MINUS     &kp PLUS       &kp EQUAL      &kp COLON           &kp GRAVE       &arrow_fn        &arrows           &none             &kp DEL             &none
+                                &none      &kp UNDER           &kp MINUS     &kp PLUS       &kp EQUAL      &kp COLON           &kp GRAVE       &arrow_fn        &arrows         &undo             &kp DEL             &none
                                 &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT        &kp UP           &kp DOWN        &kp RIGHT         &kp FSLH            &none
-                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &kp TILDE       &none            &none           &none             &cm RSHFT BSLH      &none
+                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &kp TILDE       &cp_ct            &paste           &redo             &cm RSHFT BSLH      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
