@@ -170,19 +170,19 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  _           |  -        |    +       |     =       |    :      |   |     `     |     =>      |     <>    |   undo      |   Delete   |       |
+// |       |     `        |     ~     |   =>       |    <>       |    :      |   | copy/cut  |  paste      |   undo    |   redo      |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |     /      |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |      ~    |  copy/cut   |    paste  |  redo       |  \/RSHIFT  |       |
+// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |           |             |           |             |  \/RSHIFT  |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp UNDER           &kp MINUS     &kp PLUS       &kp EQUAL      &kp COLON           &kp GRAVE       &arrow_fn        &arrows         &undo             &kp DEL             &none
-                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT        &kp UP           &kp DOWN        &kp RIGHT         &kp FSLH            &none
-                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &kp TILDE       &cp_ct            &paste           &redo             &cm RSHFT BSLH      &none
+                                &none      &kp GRAVE           &kp TILDE     &arrow_fn      &arrows        &kp COLON           &cp_ct         &paste        &undo           &redo             &kp DEL             &none
+                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp FSLH            &none
+                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &none             &cm RSHFT BSLH      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
@@ -191,18 +191,18 @@
 
                 raise_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |   !          |  @        |  #         |  $          |  %         |  |  ^        |  &        |  *         |  CAPS       |  BSPC      |        |
+// |       |   !          |  @        |  #         |  $          |  %        |   |  ^        |  &        |  *         |  CAPS       |  BSPC      |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |   1          |  2        |  3         |  4          |  5         |  |  6        | 7         |  8         |  9          |  0         |        |
+// |       |   1          |  2        |  3         |  4          |  5        |   |  6        | 7         |  8         |  9          |  0         |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |   LSHIFT     |           |            |             |            |  |           |           |  ,         |  .          |  RSHIFT    |        |
+// |       |   LSHIFT     |  _        |  -         |    +        |     =     |   |           |           |  ,         |  .          |  RSHIFT    |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
                         bindings = <
                                 &none      &kp EXCL       &kp AT      &kp HASH       &kp DLLR      &kp PRCNT    &kp CARET      &kp AMPS      &kp ASTERISK       &kp CAPS      &kp BSPC       &none
                                 &none      &kp N1         &kp N2      &kp N3         &kp N4        &kp N5       &kp N6         &kp N7        &kp N8             &kp N9        &kp N0         &none
-                                &none      &kp LSHFT      &none       &none          &none         &none        &none          &none         &kp COMMA          &kp DOT       &kp RSHFT      &none
+                                &none      &kp LSHFT      &kp UNDER   &kp MINUS      &kp PLUS      &kp EQUAL        &none          &none         &kp COMMA          &kp DOT       &kp RSHFT      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
