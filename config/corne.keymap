@@ -172,17 +172,17 @@
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |     `        |     ~     |   =>       |    <>       |    :      |   | copy/cut  |  paste      |   undo    |   redo      |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |     /      |       |
+// |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |   BSPC     |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |           |             |           |             |  \/RSHIFT  |       |
+// |       |  [/LSHFT     |     ]     |   "        |     '       |    ;      |   |           |             |           |    /        |  \/RSHIFT  |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
                                 &none      &kp GRAVE           &kp TILDE     &arrow_fn      &arrows        &kp COLON           &cp_ct         &paste        &undo           &redo             &kp DEL             &none
-                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp FSLH            &none
-                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &none             &cm RSHFT BSLH      &none
+                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp BSPC            &none
+                                &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &kp FSLH          &cm RSHFT BSLH      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
