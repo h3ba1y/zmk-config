@@ -38,6 +38,22 @@
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp SPACE>, <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>; 
                 };
+
+                // arrow function
+                arrow_fn: arrow_fn {
+                        label = "arrow_fn";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp EQUAL>, <&macro_tap &kp GT>, <&macro_release &kp EQUAL>; 
+                };
+
+                // arrows <>
+                arrows: arrows {
+                        label = "arrows";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_press &kp LT>, <&macro_tap &kp GT>, <&macro_release &kp LT>; 
+                };
         };
         
         behaviors {
@@ -106,7 +122,7 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  _           |  -        |    +       |     =       |    :      |   |     `     |             |           |             |   Delete   |       |
+// |       |  _           |  -        |    +       |     =       |    :      |   |     `     |     =>      |     <>    |             |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |     /      |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -116,7 +132,7 @@
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp UNDER           &kp MINUS     &kp PLUS       &kp EQUAL      &kp COLON           &kp GRAVE       &none            &none           &none             &kp DEL             &none
+                                &none      &kp UNDER           &kp MINUS     &kp PLUS       &kp EQUAL      &kp COLON           &kp GRAVE       &arrow_fn        &arrows           &none             &kp DEL             &none
                                 &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT        &kp UP           &kp DOWN        &kp RIGHT         &kp FSLH            &none
                                 &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &kp TILDE       &none            &none           &none             &cm RSHFT BSLH      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
