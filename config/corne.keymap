@@ -162,7 +162,7 @@
                         bindings = <
                                 &trans   &bm LSHFT Z   &kp X   &kp C   &kp V   &kp B           &kp Y   &kp U   &kp I       &kp O        &kp P            &trans
                                 &trans   &kp A         &kp S   &kp D   &kp F   &kp G           &kp H   &kp J   &kp K       &kp L        &kp BSPC         &trans
-                                &tran   &kp Q         &kp W   &kp E   &kp R   &kp T           &kp N   &kp M   &kp COMMA   &kp DOT      &bm RSHFT FSLH   &trans
+                                &trans   &kp Q         &kp W   &kp E   &kp R   &kp T           &kp N   &kp M   &kp COMMA   &kp DOT      &bm RSHFT FSLH   &trans
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
