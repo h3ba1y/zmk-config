@@ -35,6 +35,8 @@
                                                         &kp LCTRL   &kp LALT   &kp TAB      &kp SPACE   &lt RAISE ENTER     &none                      
                         >;
                 };
+                
+                };
 
 
 };
