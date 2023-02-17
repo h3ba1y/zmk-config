@@ -114,7 +114,6 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp ESC>, <&spotlight>, <&mac_emoji>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
 
@@ -124,7 +123,6 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 cp_ct: cp_ct {
@@ -133,7 +131,6 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&copy>, <&cut>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 bm: bottom_row_mods {
