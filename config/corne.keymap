@@ -104,13 +104,13 @@
                 };
 
 
-                td_multi_bl: td_multi_bl {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "TAP_DANCE_MULTI_BL";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>;
-                };
+             //   td_multi_bl: td_multi_bl {
+             //           compatible = "zmk,behavior-tap-dance";
+             //           label = "TAP_DANCE_MULTI_BL";
+             //           #binding-cells = <0>;
+             //           tapping-term-ms = <200>;
+             //           bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>;
+             //   };
 
                 cp_ct: cp_ct {
                         compatible = "zmk,behavior-tap-dance";
@@ -244,22 +244,20 @@
                 };
 
 
-
                 adjust_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |  ble_clear  |BT_SEL 0-3 |            |  reset     | bootloader |   | bootloader|  reset    | previous    |  play      | next       |        |
+// |        |   OUT_BLE   |   OUT_USB |            |  reset     | bootloader |   | bootloader|  reset    | previous    |  play      | next       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |        |   F1        |   F2      |    F3      |  F4        |   F5       |   |  F6       |  F7       |  F8         |  F9        |  F10       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |   F11       |   BRI_UP  |   BRI_DN   |  OUT_BLE   | OUT_USB    |   |  lock     | Volm down |  Mute       | Volm up    |   F12      |        |
+// |        |   F11       |   BRI_UP  |   BRI_DN   |            |            |   |  lock     | Volm down |  Mute       | Volm up    |   F12      |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
-                        
                         bindings =<
-                                &none      &bt BT_CLR      &td_multi_bl      &none             &reset            &bootloader          &bootloader       &reset              &kp C_PREV            &kp C_PP           &kp C_NEXT          &none
+                                &none      &out OUT_BLE           &out OUT_USB             &none             &reset            &bootloader          &bootloader       &reset              &kp C_PREV            &kp C_PP           &kp C_NEXT          &none
                                 &none      &kp F1          &kp F2            &kp F3            &kp F4            &kp F5               &kp F6           &kp F7               &kp F8                &kp F9             &kp F10             &none
-                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &out OUT_BLE      &out OUT_USB         &to LOCK         &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP       &kp F12             &none
+                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &none      &none         &to LOCK         &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP       &kp F12             &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
