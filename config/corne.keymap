@@ -30,9 +30,7 @@
                         label = "spotlight";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp SPACE>, <&macro_release &kp LGUI>; 
-                        layers = <BASE LOWER RAISE ADJUST>;
-                };
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp SPACE>, <&macro_release &kp LGUI>;                 };
 
                 // Emoji
                 mac_emoji: mac_emoji {
@@ -40,7 +38,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp SPACE>, <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // arrow function
@@ -49,7 +46,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp EQUAL>, <&macro_tap &kp GT>, <&macro_release &kp EQUAL>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // arrows <>
@@ -58,7 +54,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LT>, <&macro_tap &kp GT>, <&macro_release &kp LT>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
 
@@ -67,25 +62,20 @@
                         label = "copy";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
-                };
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;                };
 
                 // cut
                 cut: cut {
                         label = "cut";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
-                };
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;                };
                 // paste
                 paste: paste {
                         label = "paste";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
                 
                 // undo
