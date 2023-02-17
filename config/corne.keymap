@@ -179,7 +179,7 @@
                 bindings = <&to BASE>;
                 layers = <LOCK>;
                 };
-        }
+        };
 
         keymap {
                 compatible = "zmk,keymap";
