@@ -141,7 +141,6 @@
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 cm: code_row_mods {
@@ -153,7 +152,6 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         retro-tap;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 sm: space_mod {
@@ -164,7 +162,6 @@
                         tapping-term-ms = <200>;
                         quick-tap-ms = <125>;
                         bindings = <&kp>, <&kp>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
         };
 
