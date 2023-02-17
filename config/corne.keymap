@@ -45,27 +45,39 @@
                     layers = <LOCK>;
                 };
                 combo_copy {
-                    timeout-ms = <500>;
-                    key-positions = <13 23>;
-                    bindings = <&to BASE>;
+                    timeout-ms = <30>;
+                    key-positions = <13 22>;
+                    bindings = <&kp LG(C)>;
                     layers = <BASE>;
                 };
                 combo_cut {
-                    timeout-ms = <500>;
-                    key-positions = <14 22>;
-                    bindings = <&to BASE>;
+                    timeout-ms = <30>;
+                    key-positions = <14 21>;
+                    bindings = <&kp LG(X)>;
                     layers = <BASE>;
                 };
                 combo_paste {
-                    timeout-ms = <500>;
-                    key-positions = <16 19>;
-                    bindings = <&to BASE>;
+                    timeout-ms = <30>;
+                    key-positions = <15 20>;
+                    bindings = <&kp LG(V)>;
                     layers = <BASE>;
                 };
-                combo_arrow_fn {
-                    timeout-ms = <500>;
-                    key-positions = <16 19>;
-                    bindings = <&to BASE>;
+                combo_sel_all {
+                    timeout-ms = <30>;
+                    key-positions = <28 33>;
+                    bindings = <&kp LG(A)>;
+                    layers = <BASE>;
+                };
+                combo_left_space {
+                    timeout-ms = <50>;
+                    key-positions = <27 34>;
+                    bindings = <&kp LC(LEFT)>;
+                    layers = <BASE>;
+                };
+                combo_right_space {
+                    timeout-ms = <50>;
+                    key-positions = <26 35>;
+                    bindings = <&kp LC(RIGHT)>;
                     layers = <BASE>;
                 };
         };
@@ -77,7 +89,7 @@
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |    0  |   1        |    2        |   3        |     4       |     5     |   |     6     |     7     |     8      |   9          |   10       |  11   |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// | 12    |    13      |     14      |     16     |     17      |    18     |   |    19     |     20    |    21      |     22       |    23      |  24   |
+// | 12    |    13      |     14      |     15     |     16      |    17     |   |    18     |     19    |    20      |     21       |    22      |  23   |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |  25   |   26       |    27       |    28      |    29       |    30     |   |   31      |   32      |    33      |      34      |    35      |  36   |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -114,7 +126,7 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |     `        |     ~     |            |             |    :      |   |           |             |           |            |   Delete   |       |
+// |       |     `        |     ~     |     <       |    >       |      :    |   |           |             |           |            |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |   BSPC     |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -124,7 +136,7 @@
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp GRAVE           &kp TILDE     &none      &none        &kp COLON                 &none          &none         &none           &none             &kp DEL       &none
+                                &none      &kp GRAVE           &kp TILDE     &kp LT      &kp GT        &kp COLON                 &none          &none         &none           &none             &kp DEL       &none
                                 &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp BSPC      &none
                                 &none      &kp LBKT            &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &kp FSLH          &kp BSLH      &none
                                                         &kp LCTRL   &kp LALT   &tm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &kp RSHFT                        
