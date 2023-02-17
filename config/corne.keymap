@@ -84,7 +84,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Z>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // redo
@@ -92,9 +91,7 @@
                         label = "redo";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp Z>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;
-                        layers = <BASE LOWER RAISE ADJUST>;
-                };
+                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp Z>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;                };
         };
         
         behaviors {
