@@ -22,6 +22,7 @@
                 if-layers = <LOWER RAISE>;
                 then-layer = <ADJUST>;
                 };
+                layers = <BASE LOWER RAISE ADJUST>;
         };
 
         macros {
@@ -30,6 +31,7 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&macro_press &kp LGUI>, <&macro_tap &kp SPACE>, <&macro_release &kp LGUI>; 
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // Emoji
@@ -37,7 +39,8 @@
                         label = "mac_emoji";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp SPACE>, <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp SPACE>, <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // arrow function
@@ -45,7 +48,8 @@
                         label = "arrow_fn";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp EQUAL>, <&macro_tap &kp GT>, <&macro_release &kp EQUAL>; 
+                        bindings = <&macro_press &kp EQUAL>, <&macro_tap &kp GT>, <&macro_release &kp EQUAL>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // arrows <>
@@ -53,7 +57,8 @@
                         label = "arrows";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LT>, <&macro_tap &kp GT>, <&macro_release &kp LT>; 
+                        bindings = <&macro_press &kp LT>, <&macro_tap &kp GT>, <&macro_release &kp LT>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
 
@@ -62,7 +67,8 @@
                         label = "copy";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // cut
@@ -70,14 +76,16 @@
                         label = "cut";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
                 // paste
                 paste: paste {
                         label = "paste";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
                 
                 // undo
@@ -85,7 +93,8 @@
                         label = "undo";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Z>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Z>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 // redo
@@ -93,7 +102,8 @@
                         label = "redo";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp Z>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>; 
+                        bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp Z>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
         };
         
@@ -104,14 +114,26 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp ESC>, <&spotlight>, <&mac_emoji>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
-                cp_ct: tap_dance_multi_mac {
+
+                td_multi_bl: td_multi_bl {
                         compatible = "zmk,behavior-tap-dance";
-                        label = "TAP_DANCE_MULTI_MAC";
+                        label = "TAP_DANCE_MULTI_BL";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>;
+                        layers = <BASE LOWER RAISE ADJUST>;
+                };
+
+                cp_ct: cp_ct {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "CP_CT";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&copy>, <&cut>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 bm: bottom_row_mods {
@@ -122,6 +144,7 @@
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 cm: code_row_mods {
@@ -133,6 +156,7 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         retro-tap;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
 
                 sm: space_mod {
@@ -143,6 +167,7 @@
                         tapping-term-ms = <200>;
                         quick-tap-ms = <125>;
                         bindings = <&kp>, <&kp>;
+                        layers = <BASE LOWER RAISE ADJUST>;
                 };
         };
 
@@ -241,21 +266,23 @@
 
                 adjust_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |  ble_clear  | BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |   |  OUT_USB  |  OUT_BLE  | previous    |  play      | next       |        |
+// |        |  ble_clear  | BT_SEL 0  |            |  reset     | bootloader |   | bootloader|  reset    | previous    |  play      | next       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |        |   F1        |   F2      |    F3      |  F4        |   F5       |   |  F6       |  F7       |  F8         |  F9        |  F10       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |   F11       |   BRI_UP  |   BRI_DN   |            | bootloader |   |  reset    | Volm down |  Mute       | Volm up    |   F12      |        |
+// |        |   F11       |   BRI_UP  |   BRI_DN   |  lock      | OUT_USB    |   |  OUT_BLE  | Volm down |  Mute       | Volm up    |   F12      |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE | ESC/Spotlite/Emoji |
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings =<
-                                &none      &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3        &out OUT_USB     &out OUT_BLE         &kp C_PREV            &kp C_PP           &kp C_NEXT            &none
-                                &none      &kp F1          &kp F2            &kp F3            &kp F4            &kp F5              &kp F6           &kp F7               &kp F8                &kp F9               &kp F10             &none
-                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &to LOCK             &bootloader         &reset           &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP                &kp F12             &none
+                                &none      &bt BT_CLR      &td_multi_bl      &none             &reset            &bootloader          &bootloader       &reset              &kp C_PREV            &kp C_PP           &kp C_NEXT          &none
+                                &none      &kp F1          &kp F2            &kp F3            &kp F4            &kp F5               &kp F6           &kp F7               &kp F8                &kp F9             &kp F10             &none
+                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &to LOCK          &out OUT_USB         &out OUT_BLE     &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP       &kp F12             &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &td_multi_mac                        
                         >;
                 };
+
+                
         };
 };
