@@ -112,7 +112,7 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |     `        |     ~     |   =>       |    <>       |    :      |   |           |             |           |            |   Delete   |       |
+// |       |     `        |     ~     |            |    <>       |    :      |   |           |             |           |            |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |   BSPC     |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -122,7 +122,7 @@
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp GRAVE           &kp TILDE     &arrow_fn      &arrows        &kp COLON           &none         &none        &none          &none             &kp DEL             &none
+                                &none      &kp GRAVE           &kp TILDE     &none      &arrows        &kp COLON           &none         &none        &none          &none             &kp DEL             &none
                                 &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp BSPC            &none
                                 &none      &cm LSHFT LBKT      &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &kp FSLH          &cm RSHFT BSLH      &none
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &none                        
