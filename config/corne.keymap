@@ -128,7 +128,6 @@
                                                         &kp LCTRL   &kp LALT   &sm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &none                        
                         >;
                 };
-d;da
 
 
                 raise_layer {
