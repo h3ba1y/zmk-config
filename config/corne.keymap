@@ -81,7 +81,7 @@
                     layers = <BASE>;
                 };
 
-                combo_right_space {
+                combo_esc {
                     timeout-ms = <50>;
                     key-positions = <28 31>;
                     bindings = <&kp ESC>;
@@ -133,7 +133,7 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |     `        |     ~     |     <       |    >       |      :    |   |           |    UP       |           |            |   Delete   |       |
+// |       |     `        |     ~     |     <       |    >       |      :    |   |           |    UP       |           |    ESC      |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       |     RIGHT |             |   BSPC    |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
@@ -143,7 +143,7 @@
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp GRAVE           &kp TILDE     &kp LT      &kp GT        &kp COLON                 &none          &kp UP         &none           &none             &kp DEL       &none
+                                &none      &kp GRAVE           &kp TILDE     &kp LT      &kp GT        &kp COLON                 &none          &kp UP         &none           &kp ESC             &kp DEL       &none
                                 &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp DOWN        &kp RIGHT        &none         &kp BSPC      &none
                                 &none      &kp LBKT            &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &kp FSLH          &kp BSLH      &none
                                                         &kp LCTRL   &kp LALT   &tm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &kp RSHFT                        
