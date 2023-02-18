@@ -64,19 +64,19 @@
                 };
                 combo_sel_all {
                     timeout-ms = <30>;
-                    key-positions = <28 33>;
+                    key-positions = <25 34>;
                     bindings = <&kp LG(A)>;
                     layers = <BASE>;
                 };
                 combo_left_space {
                     timeout-ms = <50>;
-                    key-positions = <27 34>;
+                    key-positions = <26 33>;
                     bindings = <&kp LC(LEFT)>;
                     layers = <BASE>;
                 };
                 combo_right_space {
                     timeout-ms = <50>;
-                    key-positions = <26 35>;
+                    key-positions = <27 32>;
                     bindings = <&kp LC(RIGHT)>;
                     layers = <BASE>;
                 };
@@ -91,9 +91,9 @@
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // | 12    |    13      |     14      |     15     |     16      |    17     |   |    18     |     19    |    20      |     21       |    22      |  23   |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |  25   |   26       |    27       |    28      |    29       |    30     |   |   31      |   32      |    33      |      34      |    35      |  36   |
+// |  24   |   25       |    26       |    27      |    28       |    29     |   |   30      |   31      |    32      |      33      |    34      |  35   |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-//                                    |    37      |   38        |     39    |   |   40      |       41  |    42              |
+//                                    |    36      |   37        |     38    |   |   39      |       40  |    41              |
 //                                    ----------------------------------------   ----------------------------------------------
                          
                         bindings = <
@@ -126,18 +126,18 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |     `        |     ~     |     <       |    >       |      :    |   |           |             |           |            |   Delete   |       |
+// |       |     `        |     ~     |     <       |    >       |      :    |   |           |    UP       |           |            |   Delete   |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       | UP        |  RIGHT      |   BSPC     |       |
+// |       |  {           |     }     |   (        |     )       |    |      |   |   LEFT    |  DOWN       |     RIGHT |             |   BSPC    |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |       |  [           |     ]     |   "        |     '       |    ;      |   |           |             |           |    /        |  \/RSHIFT  |       |
+// |       |  [           |     ]     |   "        |     '       |    ;      |   |           |             |           |    /        |  \        |       |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE |       RSHIFT        |
 //                                    ----------------------------------------   ----------------------------------------------
                         
                         bindings = <
-                                &none      &kp GRAVE           &kp TILDE     &kp LT      &kp GT        &kp COLON                 &none          &none         &none           &none             &kp DEL       &none
-                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp UP        &kp DOWN        &kp RIGHT         &kp BSPC      &none
+                                &none      &kp GRAVE           &kp TILDE     &kp LT      &kp GT        &kp COLON                 &none          &kp UP         &none           &none             &kp DEL       &none
+                                &none      &kp LBRC            &kp RBRC      &kp LPAR       &kp RPAR       &kp PIPE            &kp LEFT       &kp DOWN        &kp RIGHT        &none         &kp BSPC      &none
                                 &none      &kp LBKT            &kp RBKT      &kp DQT        &kp APOS       &kp SEMI            &none          &none         &none           &kp FSLH          &kp BSLH      &none
                                                         &kp LCTRL   &kp LALT   &tm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &kp RSHFT                        
                         >;
@@ -156,7 +156,7 @@
 //                                    ----------------------------------------   ----------------------------------------------
                         bindings = <
                                 &none      &kp EXCL       &kp AT      &kp HASH       &kp DLLR      &kp PRCNT    &kp COMMA      &kp N7        &kp N8       &kp N9      &kp CAPS       &none
-                                &none      &kp CARET      &kp AMPS    &kp ASTERISK   &kp UNDER     &kp MINUS    &kp DOT        &kp N6        &kp N7       &kp N9      &kp BSPC       &none
+                                &none      &kp CARET      &kp AMPS    &kp ASTERISK   &kp UNDER     &kp MINUS    &kp DOT        &kp N4        &kp N5       &kp N6      &kp BSPC       &none
                                 &none      &kp LSHFT      &kp FSLH    &kp PLUS       &kp EQUAL     &none        &kp N0         &kp N1        &kp N2       &kp N3      &kp RSHFT      &none
                                                         &kp LCTRL   &kp LALT   &tm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &none                        
                         >;
@@ -165,18 +165,18 @@
 
                 adjust_layer {
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |   OUT_BLE   |   OUT_USB |            |  reset     | bootloader |   | bootloader|  reset    | previous    |  play      | next       |        |
+// |        |   OUT_BLE   |   OUT_USB |   lock     |  reset     | bootloader |   | bootloader|  reset    | previous    |  play      | next       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 // |        |   F1        |   F2      |    F3      |  F4        |   F5       |   |  F6       |  F7       |  F8         |  F9        |  F10       |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
-// |        |   F11       |   BRI_UP  |   BRI_DN   |            |            |   |     lock  | Volm down |  Mute       | Volm up    |   F12      |        |
+// |        |   F11       |   BRI_UP  |   BRI_DN   |            |            |   |           | Volm down |  Mute       | Volm up    |   F12      |        |
 // ---------------------------------------------------------------------------   --------------------------------------------------------------------------
 //                                    | LCTRL      | LALT       | TAB/CMD    |   | SPACE/LWR | ENTER/RSE |       RSHIFT       |
 //                                    ----------------------------------------   ----------------------------------------------
                         bindings =<
-                                &none      &out OUT_BLE           &out OUT_USB             &none             &reset            &bootloader          &bootloader       &reset              &kp C_PREV            &kp C_PP           &kp C_NEXT          &none
+                                &none      &out OUT_BLE           &out OUT_USB             &to LOCK              &reset            &bootloader          &bootloader       &reset              &kp C_PREV            &kp C_PP           &kp C_NEXT          &none
                                 &none      &kp F1          &kp F2            &kp F3            &kp F4            &kp F5               &kp F6           &kp F7               &kp F8                &kp F9             &kp F10             &none
-                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &none      &none         &to LOCK         &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP       &kp F12             &none
+                                &none      &kp F11         &kp C_BRI_UP      &kp C_BRI_DN      &none      &none         &none         &kp C_VOL_DN         &kp C_MUTE            &kp C_VOL_UP       &kp F12             &none
                                                         &kp LCTRL   &kp LALT   &tm LGUI TAB      &lt LOWER SPACE   &lt RAISE ENTER     &kp RSHFT                        
                         >;
                 };
